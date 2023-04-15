@@ -7,8 +7,8 @@ public class PlayerAttackHandler : MonoBehaviour
 {
     [SerializeField] private float delay = 0.1f;
     private float _nextShootingTime = 0;
-    [SerializeField] private GameObject _bulletPrefab;
     [SerializeField] private Transform _bulletSpawnPointTransform;
+    [SerializeField] private GameObject _bulletPrefab;
     
     private void Update()
     {
