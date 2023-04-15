@@ -21,9 +21,15 @@ public class IdiotBombController : MonoBehaviour, IDamageable
     private bool isAttacking  =false;
     [SerializeField] private LayerMask playerMask;
 
-    [SerializeField] private GameObject player;
+    private GameObject player;
 
     public static Action OnEnemyDied;
+
+    private void Start()
+    {
+        player = PlayerInputHandler.instance.gameObject;
+    }
+
     private void Update()
     {
         if (canMove)
